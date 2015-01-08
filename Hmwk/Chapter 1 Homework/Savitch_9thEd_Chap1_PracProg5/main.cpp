@@ -29,15 +29,15 @@ int main( )
     total_length = width_of_fence * height_of_fence;
     
     //Output Results
-    cout << "If you need to enclose an area with ";
+    cout << "If you need to enclose an area with a ";
     cout << width_of_fence;
     cout << " foot width of fence\n";
-    cout << "and ";
+    cout << "and a ";
     cout << height_of_fence;
     cout << " foot height of fence, then\n";
     cout << "you should acquire ";
     cout << total_length;
-    cout << " total length of fence.\n";
+    cout << " total length of fence in feet.\n";
     cout << "Good-bye.\n";
     
     //Exit Stage Right
