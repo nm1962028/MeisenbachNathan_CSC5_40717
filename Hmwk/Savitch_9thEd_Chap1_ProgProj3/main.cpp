@@ -26,8 +26,9 @@ int main( )
     
     //Prompt user for input
     cout << "Welcome to the CSC-5 currency eating machine"<<endl;
-    cout << "This machine eats any number of Quarters, Dimes and Nickels"<<endl;
-    cout << "and then extrudes a product equal to their total worth"<<endl;
+    cout << "I eat any number of Quarters, Dimes and Nickels"<<endl;
+    cout << "and then extrude a product equal to their total worth"<<endl;
+    cout << "I can only eat between 1 and 255 coins at a time"<<endl;
     cout << "Press enter after each coin amount entered"<<endl;
     cout << "Please input the amount of nickels"<<endl;
     cin >> nbr_of_nickels;
@@ -44,7 +45,7 @@ int main( )
     crncy_ttl=nbr_of_nickels*NICKEL+nbr_of_dimes*DIME+nbr_of_quarters*QUARTER;
     
     //Output Results
-    cout << "I have consumed "<<crncy_ttl<<" cents worth of coins!"<<endl;
+    cout << "I have consumed "<<crncy_ttl<<" cents worth of change!"<<endl;
     cout << "Well I sure am satiated, have a wonderful day!"<<endl;
     
     //Exit Stage Right
