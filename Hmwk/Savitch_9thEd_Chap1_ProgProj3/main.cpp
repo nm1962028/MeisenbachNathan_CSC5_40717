@@ -11,9 +11,9 @@ using namespace std;
 //User Libraries
 
 //Global Constants
-const int NICKEL=5;//(cents)
-const int DIME=10;//(cents)
-const int QUARTER=25;//(cents)
+const int NICKEL=5;//(5 cents)
+const int DIME=10;//(10 cents)
+const int QUARTER=25;//(25 cents)
 
 //Function Prototypes
 
@@ -21,14 +21,14 @@ const int QUARTER=25;//(cents)
 int main( ) 
 {
     //Declare Variables
-    short int nbr_of_nickels, nbr_of_dimes, nbr_of_quarters, crncy_ttl;
+    unsigned int nbr_of_nickels, nbr_of_dimes, nbr_of_quarters, crncy_ttl;
     //Number of nickels, number of Dimes, Number of Quarters and Currency total
     
     //Prompt user for input
     cout << "Welcome to the CSC-5 currency eating machine"<<endl;
     cout << "I eat any number of Quarters, Dimes and Nickels"<<endl;
     cout << "and then extrude a product equal to their total worth"<<endl;
-    cout << "I can only eat between 1 and 255 coins at a time"<<endl;
+    cout << "I can only eat between 1 and 9 of each coin at a time"<<endl;
     cout << "Press enter after each coin amount entered"<<endl;
     cout << "Please input the amount of nickels"<<endl;
     cin >> nbr_of_nickels;
