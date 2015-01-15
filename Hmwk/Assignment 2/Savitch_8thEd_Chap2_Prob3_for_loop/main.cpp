@@ -1,0 +1,38 @@
+/* 
+ * File:   main.cpp
+ * Author: Nathan Meisenbach
+ * Created on January 13, 2015, 10:16 AM
+ * Purpose: Babylonian Square root calculator
+ *             New Version to utilize loops!
+ *             For implementation
+ */
+//System Libraries
+#include <iostream>
+#include <cmath>
+using namespace std;
+//User Libraries
+//Global Constants
+//Function Prototypes
+//Execution Begins here!1
+int main(int argc, char** argv) 
+{
+    //Declare Variables and pray to the gods
+    float number,guess,r;
+    //Prompt user for a number
+    cout<<"Please enter a number to estimate its square root"<<endl;
+    cout<<"The format will be a positive float"<<endl;
+    cin>>number;
+    //Initialize
+    guess=number/2;
+    for(int count=1;abs(guess-r)>.01;count++)
+    {
+        r=number/guess;
+        guess=(guess+r)/2;
+        count++;
+        //Output the first pass
+        cout<<"Loop #"<<count<<" ->"<<guess<<endl;
+    }
+    //Exit Stage Right!
+    return 0;
+}
+
