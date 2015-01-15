@@ -4,17 +4,12 @@
  * Created on January 13, 2015, 10:16 AM
  * Purpose:bitcoin Conversion
  */
-
 //System Libraries
 #include <iostream>
 using namespace std;
-
 //User Libraries
-
 //GLobal COnstants
-
 //Function Prototypes
-
 //Execution Begins here!
 int main(int argc, char** argv) 
 {
@@ -23,12 +18,15 @@ int main(int argc, char** argv)
     float erToDlr=0.849381;//Jan13th, 2015 10:20am
     float ynToDlr=118.03;//Jan13th, 2015 10:21am
     float bitcoin,dollars,euros,yen;
-    
+
     //Input the number of bitcoin then convert
-    
     cout<<"Input the number of bitcoin "<<endl;
     cout<<"You wish to purchase."<<endl;
     cin>>bitcoin;
+    //Ensure only 2 digits place the place holder
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
     //convert to all the currencies
     dollars=bcToDlr*bitcoin;
     euros=erToDlr*dollars;

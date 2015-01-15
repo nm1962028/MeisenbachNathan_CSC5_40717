@@ -12,7 +12,7 @@ using namespace std;
 //User Libraries
 //Global Constants
 //Function Prototypes
-//Execution Begins here!
+//Execution Begins here!1
 int main(int argc, char** argv) {
     //Declare Variables and pray to the gods
     float number,guess,r;
@@ -31,6 +31,14 @@ int main(int argc, char** argv) {
     guess=(guess+r)/2;
     //Output the second pass
     cout<<"Second Pass calculation ->"<<guess<<endl;
+    r=number/guess;
+    guess=(guess+r)/2;
+    //Output the third pass
+    cout<<"Third Pass calculation ->"<<guess<<endl;
+    r=number/guess;
+    guess=(guess+r)/2;
+    //Output the fourth pass
+    cout<<"Fourth Pass calculation ->"<<guess<<endl;
     //Exit Stage Right!
     return 0;
 }
