@@ -11,8 +11,9 @@ using namespace std;
 //User Libraries
 //Global Constants
 //Function Prototypes
-int nFactrl(int);
+int nFactrl(int);//Note: nfactorial with an l
 float approxEx(float x);
+int nFactr1(int n);//Note factorial with a 1
 //Execution begins here!
 int main(int argc, char** argv) 
 {
@@ -22,7 +23,7 @@ int main(int argc, char** argv)
     cout<<"What x in e^x would you like to use?\n";
     cin>>x;
     //compare the results
-    cout<<"approximate e^x = "<<approxEx<<endl;
+    cout<<"approximate e^x = "<<approxEx(x)<<endl;
     cout<<"Exact e^x = "<<exp(x)<<endl;
     //exit stage right
     return 0;
@@ -46,7 +47,7 @@ int nFactrl(int n)
     if(n==0||n==1)return factorial;
     else if(n<=13)
     {
-        for(int i=1;i<=n;i++)
+        for(int i=2;i<=n;i++)
         {
             factorial*=i;
         }
@@ -55,4 +56,22 @@ int nFactrl(int n)
     {
         return -1;
     }
+}    
+int nFactr1(int n)
+{
+    //Declare the variable
+    //Note function only works for values 0-13
+    int factorial=1;
+    if(n==0||n==1)factorial=1;
+    else if(n<=13)
+    {
+        for(int i=2;i<=n;i++)
+        {
+            factorial*=i;
+        }
+    }else
+    {
+        factorial=-1;
+    }
+    return factorial;
 }    
