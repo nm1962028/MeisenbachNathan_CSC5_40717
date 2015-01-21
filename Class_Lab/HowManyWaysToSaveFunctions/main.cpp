@@ -18,15 +18,16 @@ using namespace std;
 //n = number of years compounding periods
 //FV          PV   int  n
 float save1(float,float,int);
+float save1(float,float,float=12.0f);//Defaulted Parameter for nCompnd years
 float save2(float,float,int);
 float save3(float,float,int);
 float save4(float,float,int);
-float save4(float,float,float);
+float save4(float,float,float);//Overloaded function call
 //Execution begins here!
 int main()
 {
     //Declare and initialize values
-    float prsVal=1000.0f;//$100
+    float prsVal=100.0f;//$100
     float intRate=6;//interest rate per year
     int   nCompnd=72/intRate;//by the rule of 72 to double
     float fCompnd=nCompnd;
@@ -37,15 +38,19 @@ int main()
     cout<<"Interest Rate = "<<intRate*100<<"%"<<endl;
     cout<<"Number of compounding periods = "<<nCompnd<<" (years)"<<endl;
     //Output the future value
-    cout<<"Our Savings =$"
+    cout<<"Our Savings 1 =$"
             <<save1(prsVal,intRate,nCompnd)<<endl;
-    cout<<"Our Savings =$"
+    cout<<"Our Savings 1 =$"
+            <<save1(prsVal,intRate,fCompnd)<<endl;
+    cout<<"Our Savings 1 =$"
+            <<save1(prsVal,intRate)<<endl;
+    cout<<"Our Savings 2 =$"
             <<save2(prsVal,intRate,nCompnd)<<endl;
-    cout<<"Our Savings =$"
+    cout<<"Our Savings 3 =$"
             <<save3(prsVal,intRate,nCompnd)<<endl;
-    cout<<"Our Savings =$"
+    cout<<"Our Savings 4 =$"
             <<save4(prsVal,intRate,nCompnd)<<endl;
-    cout<<"Our Savings =$"
+    cout<<"Our Savings 4 =$"
             <<save4(prsVal,intRate,fCompnd)<<endl;
     //Exit stage right!
  
@@ -59,6 +64,9 @@ int main()
 //output
 //savings->future value in dollars
 float save1(float p,float i,int n){
+    return p*pow(1+i,n);
+}
+float save1(float p,float i,float n){
     return p*pow(1+i,n);
 }
 float save2(float p,float i,int n){
